@@ -1,6 +1,5 @@
 import React from 'react'
 
-import './Welcome.css';
 
 export default function Main({...props}) {
 

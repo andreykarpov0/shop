@@ -4,12 +4,11 @@ import React, { useEffect, useState } from 'react'
 import GoodsList from './../GoodsElements/GoodsList';
 
 export default function Home() {
-  const testList = [{id:"/1", name:"one"}]
 
-  const [DocElements,setDocElements] = useState([])
+  const [goodsList,setGoodsList] = useState([])
 
   useEffect(() => {
-    fetch("/projectList")
+    fetch("/goodsList")
     .then(res => res.json())
     .then(
         (result) => {
@@ -21,8 +20,7 @@ export default function Home() {
 
   return (
     <div>
-      <Menu items={GetMenuItems()}/>
-      <DocView List={testList}/>
+      <GoodsList List={goodsList} />
     </div>
   )
 }

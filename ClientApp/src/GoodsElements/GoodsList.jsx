@@ -1,6 +1,5 @@
 import React from 'react'
 
-import GoodsList from './../GoodsElements/GoodsList';
 
 export default function DocView({List, ...props}) {
   
