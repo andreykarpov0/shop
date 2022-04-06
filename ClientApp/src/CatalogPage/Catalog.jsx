@@ -1,31 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import GoodsList from './../GoodsElements/GoodsList';
+import Menu from './../MenuComponent/Menu';
 
 
 export default function Main({...props}) {
 
-    const eventAct = () => {
-        window.location.href = "/reg";
-    }
+    const [goodsList,setGoodsList] = useState([])
 
-    const eventActAuth = () => {
-        window.location.href = "/auth";
-    }
+    useEffect(() => {
+        fetch("/goodsList")
+        .then(res => res.json())
+        .then(
+            (result) => {
+                console.log(result);
+                setGoodsList(result.response);
+            }
+        )
+    },[])
 
-    return ( 
-    <div className="mainPage">
-        <p id="title">Chemex</p>
-        <div className="container">
-            <div className="info_block">
-                <p id="welcome"> Добро пожаловать!</p> 
-                <div className="button_row">
-                    <div id="reg_btn" onClick={eventAct}>Создать аккаунт</div>
-                    <div id="log_btn" onClick={eventActAuth}>Войти</div>
-                </div>
-            </div>
+    return (
+        <div>
+            <Menu/>
+            <GoodsList List={goodsList}/>
         </div>
-    </div>
     )
-
   
 }
 

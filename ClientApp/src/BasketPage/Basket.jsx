@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 //import './Home.css';
 import GoodsList from './../GoodsElements/GoodsList';
+import Menu from './../MenuComponent/Menu';
 
 export default function Home() {
 
   const [goodsList,setGoodsList] = useState([])
 
   useEffect(() => {
-    fetch("/goodsList")
+    fetch("/basketList")
     .then(res => res.json())
     .then(
         (result) => {
@@ -20,7 +21,8 @@ export default function Home() {
 
   return (
     <div>
-      <GoodsList List={goodsList} />
+      <Menu/>
+      <GoodsList List={goodsList}/>
     </div>
   )
 }

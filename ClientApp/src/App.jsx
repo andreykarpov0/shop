@@ -20,7 +20,7 @@ export default function App({ history, ...props }) {
         <Switch>
             <Route path="/Basket" component={Basket}/>
             <Route path="/Catalog" component={Catalog}/>
-            <Redirect from='/' to='/welcome'/>
+            <Redirect from='/' to='/Catalog'/>
         </Switch>
     </div>
   )
