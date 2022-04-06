@@ -22,6 +22,7 @@ export default function Home() {
   return (
     <div>
       <Menu/>
+      
       <GoodsList List={goodsList}/>
     </div>
   )

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import GoodsList from './../GoodsElements/GoodsList';
 import Menu from './../MenuComponent/Menu';
 
+import "./Catalog.css"
+
 
 export default function Main({...props}) {
 

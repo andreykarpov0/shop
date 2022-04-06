@@ -7,7 +7,7 @@ export default function DocElement({name, cost, id, ...props}) {
   
 
   const eventAct = () => {
-    window.location.href = "/Document?id=" + id.toString();
+    window.location.href = "/addGood?id=" + id.toString();
   }
 
   return ( 
