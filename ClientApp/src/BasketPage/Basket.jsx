@@ -13,7 +13,7 @@ export default function Home() {
     .then(
         (result) => {
             console.log(result);
-            setDocElements(result.response);
+            setGoodsList(result.response);
         }
     )
   },[])

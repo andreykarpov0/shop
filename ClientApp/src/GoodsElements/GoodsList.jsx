@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Good from './Good'
 
 export default function DocView({List, ...props}) {
   
