@@ -1,13 +1,13 @@
 import React from 'react'
 
-import DocElement from './DocElement'
+import GoodsList from './../GoodsElements/GoodsList';
 
 export default function DocView({List, ...props}) {
   
   return (
     <div>
         {
-          List.map((el) => <DocElement name={el.name} dateEdit={el.dateEdit} id={el.id} key={el.id.toString()}/>)
+          List.map((el) => <Good name={el.name} cost={el.cost} id={el.id} key={el.id.toString()}/>)
         }
     </div>
   )

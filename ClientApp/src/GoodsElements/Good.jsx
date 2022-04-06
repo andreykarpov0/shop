@@ -12,8 +12,8 @@ export default function DocElement({name, cost, id, ...props}) {
 
   return ( 
         <div className="Good" onClick={eventAct}>
-          <div className="DocElementName" /*href={url}*/>{name}</div>
-          <div className="DocElementEditDate">{cost}</div>
+          <div className="GoodsName" /*href={url}*/>{name}</div>
+          <div className="GoodsCost">{cost}</div>
         </div>
   )
 }

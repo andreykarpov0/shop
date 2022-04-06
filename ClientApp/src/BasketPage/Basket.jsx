@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 //import './Home.css';
-import DocView from '../DocumentComponent/DocView';
-import Menu from '../Components/MenuComponent/Menu';
-import GetMenuItems from '../Components/MenuComponent/GetMenuItems';
+import GoodsList from './../GoodsElements/GoodsList';
 
 export default function Home() {
   const testList = [{id:"/1", name:"one"}]
