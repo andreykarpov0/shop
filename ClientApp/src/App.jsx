@@ -7,7 +7,7 @@ import {
 
 import './App.css';
 import Basket from './BasketPage/Basket';
-import Catalog from './MainPage/Home';
+import Catalog from './CatalogPage/Home';
 // import '../Components/Menu';
 
 
